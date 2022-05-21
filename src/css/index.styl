@@ -3,6 +3,8 @@ $main_lite = #fff
 $main_highlite = #FBD784
 $main_buttons = #FFA343
 $main_shift = 4.7rem;
+$main_border = rgba($main_lite, 30%)
+$border_radius = 0.4444em;
 
 html,
 body {
@@ -258,15 +260,18 @@ a{
     align-items: center;
 }
 .section-col{
-    &:first-child{
-        width 40%;
+    &__image{
+        width: 40%;
     } 
-    &:last-child {
+    &__content {
         width: 44%;
     }  
-    &__image{
-        width: 100%;
-    }
+.section-border{
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $main_border;
+    margin-bottom: 3rem;
+}
+
 }
 .arrow-link{
     text-decoration: none;
@@ -313,6 +318,12 @@ a{
     background: url('/images/icons/arrow_rightward.svg') no-repeat center center;        
     background-size: contain;
 }
+.icon__right {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url('/images/icons/arrow_right.svg') no-repeat center center;
+    background-size: contain;
+}
 /* Gallery */
 
 .gallery {
@@ -331,4 +342,90 @@ a{
         background: linear-gradient(to top, rgba(0,0,0,0.85) 0%,rgba(0,0,0,0) 100%);
         }
     }
+/* Footer */
+.start {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 2.66rem;
+        font-weight: 700;
+        margin-right: 3rem;
+        }    
+    &__descr {
+        font-size: 1.22rem;
+        margin-right: 3rem;
+        }
+    &__content {
+        display: flex;
+        align-items:center;
+        }
+}
+.button {
+    border: none;
+    background: $main_buttons;
+    font: 700 0.9rem/1 'Open Sans', sans-serif;
+    padding: 1.6em 4.5em 1.4em;
+    border-radius: $border_radius;
+    cursor: pointer;
+    transition: background 0.3s;
+    color: $main_dark;
+
+    &:hover {
+        background: $main_highlite;
+    }
+}
+.subscribe {
+    width: 27%;
+
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 1.4;
+        margin-bottom: 1.38em;
+        }
+    }
+.email {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 1px solid $main_border;
+
+    &__form {
+        background: none;
+        border: none;
+        transition: width 0.3s;
+        font: 0.83rem/1 'Open Sans', sans-serif;
+        padding: 1.1rem 0.77rem 1.77rem;
+        border-radius: 5px;
+        color: $main_lite;
+
+        &::placeholder {
+            color: $main_border;
+            opacity: 1;
+        }
+
+        &:focus {
+            border: none;
+            outline: none;
+        }
+    }
+    &__button {
+        position: relative;
+        padding: 0;
+        height: 100%;
+        width: 3.55rem;
+        border-radius: $border_radius $border_radius 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__icon {
+            position: absolute;
+            margin-bottom: 0 0 0 -0.2rem;
+        }
+    }
+}
+
 /* Media */ 
