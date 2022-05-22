@@ -6,10 +6,9 @@ html(lang="en")
         link(rel="preconnect" href="https://fonts.googleapis.com")
         link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
         link(href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet")
-        link(rel="stylesheet" href="/css/reset.css")
-        link(rel="stylesheet" href="/css/index.css")
-        link(rel="stylesheet" href="/js/libs/gallery.css")
-        script(src="/js/libs/gallery.js")
+        link(rel="stylesheet" href="css/reset.css")
+        link(rel="stylesheet" href="js/libs/gallery.css")
+        link(rel="stylesheet" href="css/index.css")
 body
     .page 
         header.header 
@@ -50,7 +49,7 @@ body
                     .scroll-down__icon.icon__arrow_downward
         .content 
             section.section.section__cols 
-                img.section-col.section-col__image(src="/images/enjoy.jpg" alt="Mountains")
+                img.section-col.section-col__image(src="images/enjoy.jpg" alt="Mountains")
                 .section-col.section-col__content 
                     .main-title.main-title_small 
                         span.main-title__summary EAST NUSA TENGGARA
@@ -61,7 +60,7 @@ body
                         .arrow-link__icon.icon__arrow_righrward
             section.section 
                 #gallery.gallery
-                    each imageUrl in ['/images/gallery.jpg', '/images/gallery1.jpg', '/images/gallery2.jpg', '/images/gallery3.jpg', '/images/gallery4.jpg']
+                    each imageUrl in ['images/gallery.jpg', 'images/gallery1.jpg', 'images/gallery2.jpg', 'images/gallery3.jpg', 'images/gallery4.jpg']
                         .gallery__slide(style={'background-image': `url("${imageUrl}")`})
                             .gallery__content
                                 .content_small
@@ -81,7 +80,7 @@ body
                     a.arrow-link(href="#")
                         | read more
                         .arrow-link__icon.icon__arrow_righrward
-                img.section-col.section-col__image(src="/images/culture.jpg" alt="Culture")
+                img.section-col.section-col__image(src="images/culture.jpg" alt="Culture")
             section.section-border
                 .start
                     h2.start__title QWERTy
@@ -129,4 +128,5 @@ body
                             li.social-horisontal__item
                                 a.social-horisontal__link(href="#")
                                     .icon__instagram
-        script(src="/js/index.js")
+        script(src="js/libs/gallery.js")
+        script(src="js/index.js")
