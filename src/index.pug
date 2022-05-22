@@ -88,14 +88,45 @@ body
                     .start__content
                         h4.start__descr Ready to explore?
                         button.button Get started
+                .start__devider
             footer.footer
-                .footer__content
-                    .subscribe
-                        h3.subscribe__title Let&rsquo;s go&nbsp;on&nbsp;vacation, Make your day
-                        .email
-                            input.email__form(type="text" placeholder="Email address")
-                            button.button.email__button(type="submit")
-                            .button__icon.icon__right
-                                
-                            
+                    .footer__content
+                        .subscribe
+                            h3.subscribe__title Let&rsquo;s go&nbsp;on&nbsp;vacation, Make your day
+                            label.email
+                                input.email__form(type="text" placeholder="Email address")
+                                button.button.email__button
+                                    .button__icon.icon__right
+                        .menu
+                            h4.menu__title Services
+                            ul.menu__list
+                                each link in ['Email Marketing', 'Campaigns', 'Branding', 'Offline']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                        .menu
+                            h4.menu__title About
+                            ul.menu__list
+                                each link in ['Our Story', 'Benefits', 'Team', 'Careers']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                        .menu
+                            h4.menu__title Help
+                            ul.menu__list
+                                each link in ['FAQs', 'Contact Us']
+                                    li.menu__item
+                                        a.menu__link(href="#")= link
+                    .footer__bottom
+                        .footer__terms
+                            a.footer__link(href="#") Terms &amp;&nbsp;Conditions
+                            a.footer__link(href="#") Privacy Policy
+                        ul.social-horisontal
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__facebook
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__twitter
+                            li.social-horisontal__item
+                                a.social-horisontal__link(href="#")
+                                    .icon__instagram
         script(src="/js/index.js")
